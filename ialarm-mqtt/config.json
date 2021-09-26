@@ -1,0 +1,85 @@
+{
+  "name": "ialarm-mqtt",
+  "url": "https://home-assistant.io/addons/dhcp_server/",
+  "version": "1.0",
+  "slug": "ialarm-mqtt",
+  "description": "integrates iAlarm (antifurtocasa365, Emooluxr, Casasicura and other Meian clones) via node-ialarm library",
+  "arch": [
+    "armhf",
+    "armv7",
+    "aarch64",
+    "amd64",
+    "i386"
+  ],
+  "startup": "before",
+  "boot": "auto",
+  "options": {
+    "server": {
+      "host": "192.168.1.81",
+      "port": 80,
+      "username": "admin",
+      "password": "password",
+      "zones": 40,
+      "polling_status": 30000,
+      "polling_events": 10000
+    },
+    "mqtt": {
+      "host": "192.168.1.82",
+      "port": 1883,
+      "username": "admin",
+      "password": "password",
+      "clientId": "ialarm-mqtt",
+      "cache": "5m",
+      "retain": true
+    },
+    "zoneName": "Zone",
+    "events": {
+      "name": "iAlarm last event",
+      "icon": "mdi:message-alert"
+    },
+    "bypass": {
+      "name": "Bypass",
+      "icon": "mdi:lock-open"
+    },
+    "zones": []
+  },
+  "schema": {
+    "server": {
+      "host": "str",
+      "port": "int",
+      "username": "str",
+      "password": "password",
+      "zones": "int",
+      "polling_status": "int",
+      "polling_events": "int"
+    },
+    "mqtt": {
+      "host": "str",
+      "port": "int",
+      "username": "str",
+      "password": "password",
+      "clientId": "str",
+      "cache": "str",
+      "retain": "bool"
+    },
+    "code": "match(\\d{4})?",
+    "zoneName": "str",
+    "events": {
+      "name": "str",
+      "icon": "match(mdi:\\w*)"
+    },
+    "bypass": {
+      "name": "str",
+      "icon": "match(mdi:\\w*)"
+    },
+    "zones": [
+      {
+        "number": "int",
+        "contactType": "list(NO|NC)",
+        "device_class": "str",
+        "statusProperty": "list(alarm|open|fault|ok|problem|lowbat)"
+      }
+    ]
+  },
+  "image": "maxill1/{arch}-addon-ialarm-mqtt"
+}
