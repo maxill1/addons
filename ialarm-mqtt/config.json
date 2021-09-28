@@ -1,6 +1,6 @@
 {
     "name": "ialarm-mqtt",
-    "url": "https://home-assistant.io/addons/dhcp_server/",
+    "url": "https://github.com/maxill1/addons/tree/master/ialarm-mqtt",
     "version": "1.2",
     "slug": "ialarm-mqtt",
     "description": "integrates iAlarm (antifurtocasa365, Emooluxr, Casasicura and other Meian clones) via node-ialarm library",
