@@ -24,6 +24,10 @@ server:
   port: 80  #web panel port
   username: admin #web panel username
   password: password #web panel password
+  pages: #optional custom pages for scraping
+    - /RemoteCtr.htm #arm/disarm/zone status/zone bypass
+    - /Zone.htm #zone info (name, etc)
+    - /SystemLog.htm #event log
   zones: #number of zones to publish/handle in an array of included zones: [1,2,3,4,5,6,15,19,22]. It seems that 40 is the alarm limit
     - 1
     - 2

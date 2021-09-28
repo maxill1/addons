@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.2
+custom pages support for web scraper. 
+Example:
+
+```yaml
+server:
+  pages:
+    - /status.html
+    - /Zone.html
+    - /SystemLog.html
+```
+
 ## 1.1
 
 - Zones handled as an array of int (was a single int before with max zone value). 
