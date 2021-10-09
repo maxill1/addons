@@ -7,6 +7,14 @@ switched to tcp implementation. Please update port from 80 to 18034
 server:
   port: 18034 
 ```
+also remove deprecated 'pages':
+
+```yaml
+  pages:
+    - /RemoteCtr.htm 
+    - /Zone.htm
+    - /SystemLog.htm 
+```
 
 ## 1.2
 custom pages support for web scraper. 
