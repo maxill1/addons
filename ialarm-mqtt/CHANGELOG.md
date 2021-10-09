@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.3
+- fixed zone message with node-ialarm@0.4.2
+- logging node-ialarm version on init
+
 ## 2.0.2
 changed dockerfile ensure we are using latest verion of ialarm-mqtt
 
