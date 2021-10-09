@@ -1,7 +1,7 @@
 {
     "name": "ialarm-mqtt",
     "url": "https://github.com/maxill1/addons/tree/master/ialarm-mqtt",
-    "version": "2.0",
+    "version": "2.0.2",
     "slug": "ialarm-mqtt",
     "description": "integrates iAlarm (antifurtocasa365, Emooluxr, Casasicura and other Meian clones) via node-ialarm library",
     "arch": [

@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.2
+changed dockerfile ensure we are using latest verion of ialarm-mqtt
+
 ## 2.0
 switched to tcp implementation. Please update port from 80 to 18034
 
