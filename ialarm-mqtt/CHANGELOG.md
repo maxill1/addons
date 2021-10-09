@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.0
+switched to tcp implementation. Please update port from 80 to 18034
+
+```yaml
+server:
+  port: 18034 
+```
+
 ## 1.2
 custom pages support for web scraper. 
 Example:

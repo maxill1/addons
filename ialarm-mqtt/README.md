@@ -16,18 +16,14 @@ Some clones model example:
 
 ### basic configuration
 
-Put in server the "web panel" address and login data. 
+Put in server the alarm address, port and login data. 
 
 ```yaml
 server:
-  host: 192.168.1.81 #web panel ip
-  port: 80  #web panel port
-  username: admin #web panel username
-  password: password #web panel password
-  pages: #optional custom pages for scraping
-    - /RemoteCtr.htm #arm/disarm/zone status/zone bypass
-    - /Zone.htm #zone info (name, etc)
-    - /SystemLog.htm #event log
+  host: 192.168.1.81 #tcp panel ip
+  port: 18034  #default tcp panel port
+  username: admin #tcp panel username
+  password: password #tcp panel password
   zones: #number of zones to publish/handle in an array of included zones: [1,2,3,4,5,6,15,19,22]. It seems that 40 is the alarm limit
     - 1
     - 2
@@ -115,3 +111,6 @@ zones:
     statusProperty: open #status property to monitor
 
 ```
+
+## Notes:
+since version 2.0 this addons uses tcp implementation of node-ialarm, please update port from 80 to 18034
