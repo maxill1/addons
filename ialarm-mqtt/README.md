@@ -21,6 +21,7 @@ Please report bugs on project [page](https://github.com/maxill1/ialarm-mqtt/issu
 Put in server the alarm address, port and login data. 
 
 ```yaml
+name: AlarmName #(optional, if not provided will be your panel default name - TCPIP_PANEL for Antifurto365)
 server:
   host: 192.168.1.81 #tcp panel ip
   port: 18034  #default tcp panel port
@@ -77,6 +78,9 @@ mqtt:
   clientId: ialarm-mqtt #mqtt client id
   cache: 5m #this will sends data only if changed or every 5 minutes
   retain: true #mqtt retain
+hadiscovery:
+  alarm_qos: 2 #QoS for the alarm topic
+  sensors_qos: 0 #QoS for the sensors topic
 code: 1234 #HA frontend alarm code
 zoneName: Zone #zone prefix name (Zone 1 Kitchen, etc )
 events: #events sensor configuration
@@ -89,7 +93,7 @@ zones: # specific zone config
   - number: '39' #zone number
     contactType: NC #NC=normally closed, NO=normally opened
     device_class: moisture #ha device class
-    statusProperty: open #status property to monitor
+    statusProperty: fault #status property to monitor
 ```	
 
 #### HA frontend alarm code
@@ -110,7 +114,7 @@ zones:
   - number: '39' #zone number
     contactType: NC #NC=normally closed, NO=normally opened
     device_class: moisture #ha device class
-    statusProperty: open #status property to monitor
+    statusProperty: fault #status property to monitor
 
 ```
 
