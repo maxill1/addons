@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.0.4
+- updated node-ialarm@0.4.4 and ialarm-mqtt@0.9.0
+- name is now configurable in yaml
+- QoS configurable in yaml
+- polling_status reduced to 5 seconds
+- devices are now splitted (alarm and zones)
+- every zone has now 4 sensors: alarm, fault, lowbat and wirelessLoss and 1 bypass switch
+- 3 new switches: 
+    - clear cache
+    - clear discovery
+    - alarm triggered cancel (resets sensors "alarm" property on alarm panel)
+
 ## 2.0.3
 - fixed zone message with node-ialarm@0.4.2
 - logging node-ialarm version on init
