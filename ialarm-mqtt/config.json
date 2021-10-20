@@ -103,7 +103,7 @@
             "port": "int",
             "username": "str",
             "password": "password",
-            "clientId": "str",
+            "clientId": "str?",
             "cache": "str",
             "retain": "bool"
         },
@@ -124,9 +124,9 @@
         "zones": [
             {
                 "number": "int",
-                "contactType": "list(NO|NC)",
-                "device_class": "str",
-                "statusProperty": "list(alarm|open|fault|ok|problem|lowbat)"
+                "contactType": "list(NO|NC)?",
+                "device_class": "str?",
+                "statusProperty": "list(alarm|open|fault|ok|problem|lowbat)?"
             }
         ]
     },

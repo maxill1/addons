@@ -4,6 +4,7 @@
 - fixed triggered status
 - improved logging
 - disconnect on every tcp message received in attempt to fix [issue 23](https://github.com/maxill1/ialarm-mqtt/issues/23)
+- zone config optional properties
 
 ## 2.0.4
 - updated node-ialarm@0.4.4 and ialarm-mqtt@0.9.0
