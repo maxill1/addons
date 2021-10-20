@@ -2,8 +2,8 @@
 
 #hassos config file
 CONFIG_PATH=/data/options.json
-APP_PATH=/app/node_modules/ialarm-mqtt
-LIB_PATH=/app/node_modules/ialarm
+APP_PATH=/app/ialarm-mqtt
+LIB_PATH=/app/ialarm-mqtt/node_modules/ialarm
 
 #ialarm-mqtt version
 APP_VERSION=$(cat ${APP_PATH}/package.json \

@@ -7,9 +7,11 @@ ENV LANG C.UTF-8
 RUN apk add --update --no-cache nodejs npm
 
 # get latest package and extract in app folder
-WORKDIR /app
-RUN npm install --prefix /app ialarm-mqtt@0.9.0
-RUN cd /app && npm install
+WORKDIR /tmp
+RUN npm v ialarm-mqtt@0.9.2 dist.tarball | xargs curl | tar -xz
+RUN mkdir -p /app && mv /tmp/package /app/ialarm-mqtt
+WORKDIR /app/ialarm-mqtt
+RUN npm install
 
 # Copy data for add-on
 COPY run.sh /
