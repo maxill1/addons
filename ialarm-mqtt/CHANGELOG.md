@@ -1,4 +1,17 @@
 # Changelog
+## 2.0.6
+- updated node-ialarm@0.5.1 and ialarm-mqtt@0.10.0
+- messages queue with small delay (configurable) (attempt to fix https://github.com/maxill1/ialarm-mqtt/issues/23)
+- features enabled/disabled via config: (useful to debug https://github.com/maxill1/ialarm-mqtt/issues/23)
+  - armDisarm = alarm.armDisarm, alarm.getStatusArea/alarm.getStatusAlarm
+  - sensors = alarm.getZoneStatus
+  - events = alarm.getLastEvents
+  - bypass = alarm.bypassZone
+  - zoneNames = alarm.getZoneInfo
+- logging refactoring  (useful to debug https://github.com/maxill1/ialarm-mqtt/issues/23)
+- ha discovery availability refactoring
+- multiple area support with different alarm_control_panel (fix https://github.com/maxill1/ialarm-mqtt/issues/20)
+- 128 zone support (fix https://github.com/maxill1/ialarm-mqtt/issues/24)
 
 ## 2.0.5
 - fixed triggered status
