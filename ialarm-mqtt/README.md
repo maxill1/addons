@@ -1,5 +1,5 @@
 # ialarm-mqtt
-This add-on allows you to control iAlarm (antifurtocasa365, Emooluxr, Casasicura and other Meian clones) via node-ialarm library
+This add-on allows you to control iAlarm (antifurtocasa365, Emooluxr, Casasicura and other Meian/Focus clones) via node-ialarm library
 Some clones model example:
 * ST-IVCGT
 

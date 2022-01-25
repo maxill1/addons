@@ -1,4 +1,9 @@
 # Changelog
+## 2.0.7
+- updated ialarm-mqtt@0.10.1
+- Fixed publishing of zone with empty names (fix https://github.com/maxill1/ialarm-mqtt/issues/24)
+- added server.zones in schema
+
 ## 2.0.6
 - updated node-ialarm@0.5.1 and ialarm-mqtt@0.10.0
 - messages queue with small delay (configurable) (attempt to fix https://github.com/maxill1/ialarm-mqtt/issues/23)
