@@ -11,7 +11,7 @@
         "amd64",
         "i386"
     ],
-    "startup": "before",
+    "startup": "application",
     "boot": "auto",
     "options": {
         "server": {
@@ -140,6 +140,5 @@
                 "statusProperty": "list(alarm|open|fault|ok|problem|lowbat)?"
             }
         ]
-    },
-    "image": "maxill1/{arch}-addon-ialarm-mqtt"
+    }
 }
