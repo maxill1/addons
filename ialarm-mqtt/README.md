@@ -3,7 +3,8 @@ This add-on allows you to control iAlarm (antifurtocasa365, Emooluxr, Casasicura
 Some clones model example:
 * ST-IVCGT
 
-Please report bugs on project [page](https://github.com/maxill1/ialarm-mqtt/issues)
+
+For furter configuration please check [ialarm-mqtt page](https://github.com/maxill1/ialarm-mqtt/wiki/Configuration) and [troubleshooting](https://github.com/maxill1/ialarm-mqtt/wiki/Troubleshooting). If needed report bugs on project [ialarm-mqtt issue page](https://github.com/maxill1/ialarm-mqtt/issues)
 
 <a href="https://www.buymeacoffee.com/maxill1" target="_blank">
 <img src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg" alt="Buy Me A Coffee"></a>
