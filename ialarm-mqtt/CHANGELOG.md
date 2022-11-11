@@ -1,4 +1,9 @@
 # Changelog
+## 2.0.8
+- updated to node-ialarm and reworked code to handle all responses as events (no more promises, only event-emitters) - see [issue 23](https://github.com/maxill1/ialarm-mqtt/issues/23)
+- handle of "response" events and "push" events
+- "error" sensor removed and created a "status" sensor with attributes
+
 ## 2.0.7
 - updated ialarm-mqtt@0.10.1
 - Fixed publishing of zone with empty names (fix https://github.com/maxill1/ialarm-mqtt/issues/24)

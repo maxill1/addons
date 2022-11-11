@@ -1,7 +1,7 @@
 {
     "name": "ialarm-mqtt",
     "url": "https://github.com/maxill1/addons/tree/master/ialarm-mqtt",
-    "version": "2.0.7",
+    "version": "2.0.8",
     "slug": "ialarm-mqtt",
     "description": "integrates iAlarm (antifurtocasa365, Emooluxr, Casasicura and other Meian/Focus clones) via node-ialarm library",
     "arch": [
@@ -65,8 +65,7 @@
             "areas": 1,
             "delay": 200,
             "features": ["armDisarm", "sensors", "events", "bypass", "zoneNames"],
-            "polling_status": 5000,
-            "polling_events": 10000
+            "polling_status": 5000
         },
         "mqtt": {
             "host": "192.168.1.82",
@@ -106,8 +105,7 @@
             "areas": "list(1|2|3|4)",
             "delay": "int",
             "features": ["list(armDisarm|sensors|events|bypass|zoneNames)"],
-            "polling_status": "int",
-            "polling_events": "int"
+            "polling_status": "int"
         },
         "mqtt": {
             "host": "str",

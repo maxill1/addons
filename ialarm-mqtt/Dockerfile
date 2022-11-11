@@ -8,7 +8,7 @@ RUN apk add --update --no-cache nodejs npm
 
 # get latest package and extract in app folder
 WORKDIR /tmp
-RUN npm v ialarm-mqtt@0.10.1 dist.tarball | xargs curl | tar -xz
+RUN npm v ialarm-mqtt@0.11.0 dist.tarball | xargs curl | tar -xz
 RUN mkdir -p /app && mv /tmp/package /app/ialarm-mqtt
 WORKDIR /app/ialarm-mqtt
 RUN npm install
