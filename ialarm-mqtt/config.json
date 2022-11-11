@@ -64,7 +64,13 @@
             "showUnnamedZones": true,
             "areas": 1,
             "delay": 200,
-            "features": ["armDisarm", "sensors", "events", "bypass", "zoneNames"],
+            "features": [
+                "armDisarm",
+                "sensors",
+                "events",
+                "bypass",
+                "zoneNames"
+            ],
             "polling_status": 5000
         },
         "mqtt": {
@@ -104,7 +110,9 @@
             "showUnnamedZones": "bool",
             "areas": "list(1|2|3|4)",
             "delay": "int",
-            "features": ["list(armDisarm|sensors|events|bypass|zoneNames)"],
+            "features": [
+                "list(armDisarm|sensors|events|bypass|zoneNames)"
+            ],
             "polling_status": "int"
         },
         "mqtt": {
@@ -138,5 +146,6 @@
                 "statusProperty": "list(alarm|open|fault|ok|problem|lowbat)?"
             }
         ]
-    }
+    },
+    "image": "maxill1/{arch}-addon-ialarm-mqtt"
 }
