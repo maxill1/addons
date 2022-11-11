@@ -20,7 +20,7 @@ RUN \
 
 # clone version
 WORKDIR  /app
-RUN git clone --depth 1 --branch v0.11.0 https://github.com/maxill1/ialarm-mqtt.git
+RUN git clone --depth 1 --branch dev https://github.com/maxill1/ialarm-mqtt.git
 
 #install deps
 WORKDIR  /app/ialarm-mqtt

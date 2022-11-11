@@ -17,8 +17,10 @@ LIB_VERSION=$(cat ${LIB_PATH}/package.json \
     | head -1 \
     | awk -F: '{ print $2 }' \
     | sed 's/[",]//g')
+    
+NODE_VERSION=$(node -v)
 
-bashio::log.info "Passing ${CONFIG_PATH} to ialarm-mqtt@${APP_VERSION} with node-ialarm@${LIB_VERSION}"
+bashio::log.info "Starting ialarm-mqtt@${APP_VERSION} ${CONFIG_PATH} to with node-ialarm@${LIB_VERSION} on node ${NODE_VERSION}"
 
-node ${APP_PATH}/bin/ialarm-mqtt.js --hassos ${CONFIG_PATH}
-
+cd ${APP_PATH}
+exec node --entry-type=module bin/ialarm-mqtt.js --hassos ${CONFIG_PATH}

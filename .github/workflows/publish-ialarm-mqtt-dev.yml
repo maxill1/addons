@@ -1,11 +1,12 @@
-name: "Publish ialarm-mqtt"
+name: "Publish ialarm-mqtt-dev"
 
 env:
-  ADDON_NAME: ialarm-mqtt
+  ADDON_NAME: ialarm-mqtt-dev
   
 on:
-  release:
-    types: [published]
+  push:
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   publish:

@@ -1,0 +1,40 @@
+#!/command/with-contenv bashio
+# ==============================================================================
+# Home Assistant Custom Add-on: ialarm-mqtt
+# Starts ialarm-mqtt
+# ==============================================================================
+CONFIG_PATH=/data/options.json
+APP_PATH=/app/ialarm-mqtt
+LIB_PATH=/app/ialarm-mqtt/node_modules/ialarm
+
+
+#ialarm-mqtt version
+APP_VERSION=$(cat ${APP_PATH}/package.json \
+  | grep version \
+  | head -1 \
+  | awk -F: '{ print $2 }' \
+  | sed 's/[",]//g')
+
+LIB_VERSION=$(cat ${LIB_PATH}/package.json \
+    | grep version \
+    | head -1 \
+    | awk -F: '{ print $2 }' \
+    | sed 's/[",]//g')
+    
+NODE_VERSION=$(node -v)
+
+bashio::log.info "Passing ${CONFIG_PATH} ialarm-mqtt@${APP_VERSION} to with node-ialarm@${LIB_VERSION} on node ${NODE_VERSION}"
+
+export NODE_PATH=/opt/node_modules:/data/node_modules
+declare -a options
+
+
+options+=("bin/ialarm-mqtt.js")
+options+=(--hassos "${CONFIG_PATH}")
+
+cd ${APP_PATH} || bashio::exit.nok "Could not change directory to ${APP_PATH}"
+
+bashio::log.info "Starting ialarm-mqtt..."
+
+#exec npm start -- "${options[@]}"
+exec node "${options[@]}"

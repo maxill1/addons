@@ -1,7 +1,7 @@
-name: "Test ialarm-mqtt"
+name: "Test ialarm-mqtt-dev"
 
 env:
-  ADDON_NAME: ialarm-mqtt
+  ADDON_NAME: ialarm-mqtt-dev
   
 on: [push, pull_request]
 
@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v3 
+        uses: actions/checkout@v3
       - name: Test build
         uses: home-assistant/builder@master
         with:
