@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Test build
         uses: home-assistant/builder@master
         with:
@@ -16,4 +16,5 @@ jobs:
             --test \
             --all \
             --target ialarm-mqtt \
+            --docker-user maxill1 \
             --docker-hub maxill1
