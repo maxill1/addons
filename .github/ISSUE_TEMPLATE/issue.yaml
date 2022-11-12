@@ -1,0 +1,31 @@
+name: Issue
+description: Only use this if you are sure this issue is related to the addon and not ialarm-mqtt itself! Otherwise click ialarm-mqtt issues below.
+body:
+  - type: textarea
+    id: issue
+    attributes:
+      label: Description of the issue
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Addon version
+      description: If you are using edge/dev, please report commit hash.
+      placeholder: 'v0.10.1'
+    validations:
+      required: true
+  - type: textarea
+    id: platform
+    attributes:
+      label: Platform
+      description: Details from Suypervisor > System
+      placeholder: "Core: core-2022.11.2\nSupervisor: supervisor-2022.10.2\nOperating System: HassOS 9.2"
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Logs of the issue (if applicable)
+    validations:
+      required: false
