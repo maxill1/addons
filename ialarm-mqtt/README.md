@@ -1,4 +1,4 @@
-# ialarm-mqtt
+# ialarm-mqtt (stable)
 This add-on allows you to control iAlarm (antifurtocasa365, Emooluxr, Casasicura and other Meian/Focus clones) via node-ialarm library
 Some clones model example:
 * ST-IVCGT
@@ -70,6 +70,7 @@ server:
     - 39
     - 40  
   polling_status: 30000  #milliseconds for polling alarm status (default is 30 seconds)
+  polling_events: 10000 #milliseconds for polling alarm log events (default is 10 seconds)
 mqtt:
   host: 192.168.1.82 #mqtt server ip
   port: 1883 #mqtt server port

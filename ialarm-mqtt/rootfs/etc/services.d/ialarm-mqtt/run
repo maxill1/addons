@@ -37,4 +37,5 @@ cd ${APP_PATH} || bashio::exit.nok "Could not change directory to ${APP_PATH}"
 bashio::log.info "Starting ialarm-mqtt..."
 
 #exec npm start -- "${options[@]}"
-exec node "${options[@]}"
+#exec node "${options[@]}"
+exec bin/ialarm-mqtt.js "${options[@]}"
