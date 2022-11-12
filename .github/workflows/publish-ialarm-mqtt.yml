@@ -24,6 +24,6 @@ jobs:
         with:
           args: |
             --all \
-            --target ${{ ADDON_NAME }} \
+            --target ${{ env.ADDON_NAME }} \
             --docker-user maxill1 \
             --docker-hub maxill1
