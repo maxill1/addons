@@ -4,6 +4,7 @@ env:
   ADDON_NAME: ialarm-mqtt
   
 on:
+  workflow_dispatch:
   release:
     types: [published]
 
