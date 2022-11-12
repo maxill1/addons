@@ -9,6 +9,10 @@ For furter configuration please check [ialarm-mqtt page](https://github.com/maxi
 <a href="https://www.buymeacoffee.com/maxill1" target="_blank">
 <img src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg" alt="Buy Me A Coffee"></a>
 
+Note: addon versions has been aligned with ialarm-mqtt and splitted into stable and edge:
+- 2.0.7 is now **stable 0.10.1** 
+- 2.0.8x is now **edge/dev 0.11.x-dev**
+
 ## features:
 * arm home
 * arm away
