@@ -1,4 +1,9 @@
 # Changelog
+
+## 0.10.1
+- reverted back to ialarm-mqtt 0.10.1
+- following versioning of ialarm-mqtt npm package 
+
 ## 2.0.8
 - updated to node-ialarm and reworked code to handle all responses as events (no more promises, only event-emitters) - see [issue 23](https://github.com/maxill1/ialarm-mqtt/issues/23)
 - handle of "response" events and "push" events

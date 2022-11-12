@@ -1,6 +1,6 @@
 name: ialarm-mqtt
 url: https://github.com/maxill1/addons/tree/master/ialarm-mqtt
-version: 2.0.8bis
+version: 0.10.1
 slug: ialarm-mqtt
 description: integrates iAlarm (antifurtocasa365, Emooluxr, Casasicura and other Meian/Focus clones) via node-ialarm library
 arch:
@@ -69,6 +69,7 @@ options:
     - bypass
     - zoneNames
     polling_status: 5000
+    polling_events: 10000
   mqtt:
     host: 192.168.1.82
     port: 1883
@@ -103,6 +104,7 @@ schema:
     features:
     - list(armDisarm|sensors|events|bypass|zoneNames)
     polling_status: int
+    polling_events: int
   mqtt:
     host: str
     port: int
