@@ -1,4 +1,4 @@
-# ialarm-mqtt
+# ialarm-mqtt-dev
 ⚠️ This is the development version (follows ialarm-mqtt dev branch) ⚠️
 
 This add-on allows you to control iAlarm (antifurtocasa365, Emooluxr, Casasicura and other Meian/Focus clones) via node-ialarm library

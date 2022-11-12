@@ -9,7 +9,7 @@ on:
 
 jobs:
   publish:
-    name: Publish
+    name: Publish Stable
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository

@@ -14,3 +14,6 @@ To add this custom Add-ons repository, read Home Assistant documentation: https:
 - **[ialarm-mqtt](ialarm-mqtt/README.md)**
 
     iAlarm MQTT integration for Home Assistant.
+- **[ialarm-mqtt-dev](ialarm-mqtt/README.md)**
+
+    iAlarm MQTT integration for Home Assistant (dev branch).
