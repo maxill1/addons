@@ -13,6 +13,7 @@ init: false
 startup: application
 boot: auto
 options:
+  verbose: false
   server:
     host: 192.168.1.81
     port: 18034
@@ -80,7 +81,7 @@ options:
   hadiscovery:
     alarm_qos: 2
     sensors_qos: 0
-  zoneName: Zone
+    zoneName: Zone
   events:
     name: last event
     icon: mdi:message-alert
@@ -89,6 +90,7 @@ options:
     icon: mdi:lock-open
   zones: []
 schema:
+  verbose: bool
   name: str?
   server:
     host: str
@@ -114,8 +116,8 @@ schema:
   hadiscovery:
     sensors_qos: list(0|1|2)
     alarm_qos: list(0|1|2)
-  code: match(\d{4})?
-  zoneName: str
+    code: match(\d{4})?
+    zoneName: str
   events:
     name: str
     icon: match(mdi:\w*)
