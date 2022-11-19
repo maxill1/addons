@@ -83,8 +83,8 @@ mqtt:
 hadiscovery:
   alarm_qos: 2 #QoS for the alarm topic
   sensors_qos: 0 #QoS for the sensors topic
-code: 1234 #HA frontend alarm code
-zoneName: Zone #zone prefix name (Zone 1 Kitchen, etc )
+  code: 1234 #HA frontend alarm code
+  zoneName: Zone #zone prefix name (Zone 1 Kitchen, etc )
 events: #events sensor configuration
   name: iAlarm last event
   icon: mdi:message-alert
