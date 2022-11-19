@@ -7,11 +7,9 @@ on:
   push:
     branches:
       - dev
-      - master
   pull_request:
     branches:
-      - dev  
-      - master
+      - dev
   workflow_dispatch:
 
 jobs:
@@ -21,6 +19,17 @@ jobs:
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v3
+      - name: YAML Update Action
+        uses: fjogeleit/yaml-update-action@v0.12.2
+        with:
+          valueFile: 'ialarm-mqtt-dev/config.yaml'
+          propertyPath: 'version'
+          value: 0.11.1-dev-${{ github.sha }}
+          message: "Updated ialarm-mqtt-dev/config.yaml version"
+          commitChange: true
+          branch: dev
+          #targetBranch: master
+          #createPR: 'true'        
       - name: Login to DockerHub
         uses: docker/login-action@v2
         with:
