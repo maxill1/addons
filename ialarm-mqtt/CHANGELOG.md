@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.12.0
+- fixed stability issues https://github.com/maxill1/ialarm-mqtt/issues/23
+- fixed max zones https://github.com/maxill1/ialarm-mqtt/issues/24
+- fixed cache problems https://github.com/maxill1/ialarm-mqtt/issues/41
+- fixed area arm/disarm https://github.com/maxill1/ialarm-mqtt/issues/20
+- fixed hass.io addon missing alarm code https://github.com/maxill1/ialarm-mqtt/issues/40
+
 ## 0.10.1
 - reverted back to ialarm-mqtt 0.10.1
 - following versioning of ialarm-mqtt npm package 

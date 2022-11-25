@@ -3,16 +3,14 @@ This add-on allows you to control iAlarm (antifurtocasa365, Emooluxr, Casasicura
 Some clones model example:
 * ST-IVCGT
 
+For furter configuration please check [ialarm-mqtt page](https://github.com/maxill1/ialarm-mqtt/wiki/Configuration) and [troubleshooting](https://github.com/maxill1/ialarm-mqtt/wiki/Troubleshooting) or use [discussions](https://github.com/maxill1/ialarm-mqtt/discussions). 
 
-For furter configuration please check [ialarm-mqtt page](https://github.com/maxill1/ialarm-mqtt/wiki/Configuration) and [troubleshooting](https://github.com/maxill1/ialarm-mqtt/wiki/Troubleshooting). If needed report bugs on project [ialarm-mqtt issue page](https://github.com/maxill1/ialarm-mqtt/issues)
+Please report bugs on [ialarm-mqtt issues page](https://github.com/maxill1/ialarm-mqtt/issues).
 
 <a href="https://www.buymeacoffee.com/maxill1" target="_blank">
 <img src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg" alt="Buy Me A Coffee"></a>
 
-Note: addon versions has been aligned with ialarm-mqtt and splitted into stable and edge:
-- 2.0.7 is now **stable 0.10.1** 
-- 2.0.8x is now **edge/dev 0.11.x-dev**
-
+Note: addon versions has been aligned with ialarm-mqtt and splitted into stable and edge (dev).
 ## features:
 * arm home
 * arm away
@@ -74,7 +72,6 @@ server:
     - 39
     - 40  
   polling_status: 30000  #milliseconds for polling alarm status (default is 30 seconds)
-  polling_events: 10000 #milliseconds for polling alarm log events (default is 10 seconds)
 mqtt:
   host: 192.168.1.82 #mqtt server ip
   port: 1883 #mqtt server port
@@ -86,8 +83,8 @@ mqtt:
 hadiscovery:
   alarm_qos: 2 #QoS for the alarm topic
   sensors_qos: 0 #QoS for the sensors topic
-code: 1234 #HA frontend alarm code
-zoneName: Zone #zone prefix name (Zone 1 Kitchen, etc )
+  code: 1234 #HA frontend alarm code
+  zoneName: Zone #zone prefix name (Zone 1 Kitchen, etc )
 events: #events sensor configuration
   name: iAlarm last event
   icon: mdi:message-alert
